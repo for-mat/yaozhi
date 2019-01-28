@@ -87,7 +87,7 @@ for f in os.listdir('C:\\Users\\win7\\Desktop\\htmls\\'):
         check_colum(i, soup, all_elem)
     tuple_values = tuple(list_values)
     try:
-        cursor.execute('insert into hospital(name,alias,level,type,year,leader,model,bed,clinic,province,city,county,project,office,staff,device,phone,address,postcode,web,intro) values("%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s")' % tuple_values)
+        cursor.execute('insert into hospital(name,alias,level,type,year,leader,model,bed,clinic,province_text,city_text,area_text,project,office,staff,device,phone,address,postcode,web,intro) values("%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s")' % tuple_values)
     except:
         print f
     db.commit()
